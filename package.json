@@ -1,0 +1,19 @@
+{
+  "name": "learning-git3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "browser-sync": "^2.23.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm run test:html",
+    "test:html": "globstar nu-html-checker *.html",
+
+    "init-project": "mkdir sass css vendor images js && touch README.md index.html sass/style.scss js/scripts.js && curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore - .gitignore"
+
+  },
+  "author": "",
+  "license": "ISC"
+}

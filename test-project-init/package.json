@@ -1,0 +1,25 @@
+{
+  "name": "learning-git3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.23.7",
+    "onchange": "^3.3.0",
+    "rimraf": "^2.6.2"
+  },
+  "scripts": {
+    "test": "npm run test:html",
+    "test:html": "globstar nu-html-checker *.html",
+    "init-project": "mkdir sass css vendor images js && touch README.md index.html sass/style.scss js/scripts.js && curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore - .gitignore",
+    "watch": "npm run watch:browser-sync && -p watch:sassprefixer",
+    "watch:browser-sync": "browser-sync start --server -learning-git3/*.html",
+    "build:clean": "rm -rf *.css",
+    "build": "npm run build:clean",
+
+    "watch:sassprefixer": "onchange css/style.css node-sass --output-style expanded --source-map true -o css sass -- autoprefixer-cli -o css/style.prefixed.css css/style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
